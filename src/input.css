@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body {
+        @apply font-opensan;
+    }
+}
+
+.navbar-fixed {
+    @apply fixed z-[9999] bg-white bg-opacity-80;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2 );
+}
+
+.hamburger-line{
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.burger-aktif > span:nth-child(1){
+    @apply rotate-45;
+}
+
+.burger-aktif > span:nth-child(2){
+    @apply scale-0;
+}
+
+.burger-aktif > span:nth-child(3){
+    @apply -rotate-45;
+}
+
+@layer base{
+    @font-face {
+        font-family: 'Wedding';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/wedding.woff2')format('woff2'),
+            url('/font/wedding.woff')format('woff');
+    }
+    
+    @font-face {
+        font-family: 'Alex Brush';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/alexbrush.woff2')format('woff2'),
+            url('/font/alexbrush.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Black Jack';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/blackjack.woff2')format('woff2'),
+            url('/font/blackjack.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Dancing Script OT';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/dancingscript.woff2')format('woff2'),
+            url('/font/dancingscript.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Great Vibes';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/greatvibes.woff2')format('woff2'),
+            url('/font/greatvibes.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Inter Thin';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/inter.woff2')format('woff2'),
+            url('/font/inter.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Nature Beauty Personal Use';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/naturebeauty.woff2')format('woff2'),
+            url('/font/naturebeauty.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Open Sans Light';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/opensans.woff2')format('woff2'),
+            url('/font/opensans.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'PT Mono';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/ptmono.woff2')format('woff2'),
+            url('/font/ptmono.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'Weddingday Personal Use Regular';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/weddingday.woff2')format('woff2'),
+            url('/font/weddingday.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: 'White Dream';
+        font-weight: normal;
+        font-style: normal;
+        src: url('/font/white_dream.woff2')format('woff2'),
+            url('/font/white_dream.woff')format('woff');
+    }
+}
+
