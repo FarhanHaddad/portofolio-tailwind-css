@@ -448,6 +448,7 @@ video {
 
 body {
   font-family: Open Sans Light, sans-serif;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -871,14 +872,6 @@ body {
   height: 2.25rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-28 {
-  height: 7rem;
-}
-
 .w-14 {
   width: 3.5rem;
 }
@@ -895,12 +888,12 @@ body {
   width: 2.25rem;
 }
 
-.w-full {
-  width: 100%;
+.w-\[80\%\] {
+  width: 80%;
 }
 
-.w-28 {
-  width: 7rem;
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[250px\] {
@@ -1058,11 +1051,6 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -1281,20 +1269,16 @@ body {
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
 }
 
 .ease-in-out {
@@ -1386,7 +1370,7 @@ body {
   }
 }
 
-.cursor {
+/* .cursor {
   display: block;
   width: 30px;
   height: 30px;
@@ -1407,7 +1391,7 @@ body {
   background: transparent;
   animation: moveCursor2 0.5s forwards;
   border: 3px solid #64748b;
-}
+} 
 
 @keyframes moveCursor1 {
   from {
@@ -1432,7 +1416,7 @@ body {
     transform: scale(1);
     opacity: 0;
   }
-}
+}*/
 
 .svgblob {
   position: relative;
@@ -1507,6 +1491,8 @@ body {
   }
 }
 
+/* Bloob Animated 2 */
+
 .blob {
   position: absolute;
   width: 500px;
@@ -1538,9 +1524,35 @@ body {
   }
 }
 
+/* Media Query untuk layar sedang */
+
+@media (max-width: 1024px) {
+  .blob {
+    width: 350px;
+    height: 350px;
+  }
+
+  .blob:hover {
+    width: 390px;
+    height: 390px;
+  }
+
+  @keyframes move {
+    from {
+      transform: translate(0, -10px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+
+    to {
+      transform: translate(0, 400px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+}
+
 /* Media Query untuk layar kecil */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .blob {
     width: 200px;
     height: 200px;
@@ -1558,10 +1570,15 @@ body {
     }
 
     to {
-      transform: translate(0, 600px) rotate(-10deg);
+      transform: translate(0, 550px) rotate(-10deg);
       border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
     }
   }
+}
+
+.blob-container {
+  overflow: hidden;
+  position: relative;
 }
 
 .square {
@@ -1768,38 +1785,8 @@ body {
   }
 }
 
-.hover\:-translate-y-2:hover {
-  --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:-translate-y-4:hover {
-  --tw-translate-y: -1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:translate-y-4:hover {
-  --tw-translate-y: 1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:translate-y-6:hover {
   --tw-translate-y: 1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-1:hover {
-  --tw-rotate: 1deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-\[8\]:hover {
-  --tw-rotate: 8;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-\[8deg\]:hover {
-  --tw-rotate: 8deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
