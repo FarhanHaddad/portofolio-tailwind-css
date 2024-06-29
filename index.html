@@ -12,6 +12,8 @@
       type="image/x-icon"
     />
     <script>
+      const stop1 = document.getElementById("stop1");
+      const stop2 = document.getElementById("stop2");
       if (
         localStorage.theme === "dark" ||
         (!("theme" in localStorage) &&
@@ -127,7 +129,7 @@
     <!-- Header End -->
 
     <!-- Follow Cursor Start -->
-    <div class="cursor"></div>
+    <!-- <div class="cursor"></div> -->
     <!-- Follow Cursor End -->
 
     <!-- Hero section Start -->
@@ -184,8 +186,12 @@
                 >
                   <defs>
                     <linearGradient id="blobgradient-1">
-                      <stop offset="0%" stop-color="#14b8a6"></stop>
-                      <stop offset="100%" stop-color="#14b8a6"></stop>
+                      <stop id="stop1" offset="0%" stop-color="#64748b"></stop>
+                      <stop
+                        id="stop2"
+                        offset="100%"
+                        stop-color="#64748b"
+                      ></stop>
                     </linearGradient>
                   </defs>
 
@@ -226,10 +232,10 @@
             </div>
           </div>
         </div>
+        <!-- Bloob Animation Hover Start -->
+        <div class="blob"></div>
+        <!-- Bloob Animation Hover End -->
       </div>
-      <!-- Bloob Animation Hover Start -->
-      <div class="blob"></div>
-      <!-- Bloob Animation Hover End -->
     </section>
     <!-- Hero section End -->
 
@@ -321,7 +327,7 @@
           class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
         >
           <div
-            class="mb-12 rounded-b-lg p-4 shadow-md dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
+            class="mb-12 rounded-b-lg p-4 shadow-md transition duration-200 hover:translate-y-6 dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
           >
             <div class="overflow-hidden rounded-md shadow-md">
               <img
@@ -341,7 +347,7 @@
             </p>
           </div>
           <div
-            class="mb-12 rounded-b-lg p-4 shadow-md dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
+            class="mb-12 rounded-b-lg p-4 shadow-md transition duration-200 hover:translate-y-6 dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
           >
             <div class="overflow-hidden rounded-md shadow-md">
               <img
@@ -361,7 +367,7 @@
             </p>
           </div>
           <div
-            class="mb-12 rounded-b-lg p-4 shadow-md dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
+            class="mb-12 rounded-b-lg p-4 shadow-md transition duration-200 hover:translate-y-6 dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
           >
             <div class="overflow-hidden rounded-md shadow-md">
               <img src="img/ss-projek/undangan.png" alt="Card My Gallery
@@ -378,7 +384,7 @@
             </p>
           </div>
           <div
-            class="mb-12 rounded-b-lg p-4 shadow-md dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
+            class="mb-12 rounded-b-lg p-4 shadow-md transition duration-200 hover:translate-y-6 dark:shadow-sky-500 md:w-1/2 md:rounded-none md:shadow-none"
           >
             <div class="overflow-hidden rounded-md shadow-md">
               <img

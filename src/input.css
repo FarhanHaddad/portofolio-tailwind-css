@@ -174,8 +174,8 @@
   height: 500px;
   background: linear-gradient(180deg, #14b8a6 31.77%, #64748b 100%);
   mix-blend-mode: color-dodge;
-  -webkit-animation: move 25s infinite alternate;
-  animation: move 25s infinite alternate;
+  -webkit-animation: move 20s infinite alternate;
+  animation: move 20s infinite alternate;
   transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
 }
 
@@ -196,7 +196,7 @@
   }
 
   to {
-    transform: translate(500px, 100px) rotate(-10deg);
+    transform: translate(700px, 100px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
 }
@@ -208,8 +208,43 @@
   }
 
   to {
-    transform: translate(500px, 100px) rotate(-10deg);
+    transform: translate(700px, 100px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+
+  .blob:hover {
+    width: 250px;
+    height: 250px;
+  }
+
+  @-webkit-keyframes move {
+    from {
+      transform: translate(0, -10px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+    to {
+      transform: translate(0, 600px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+
+  @keyframes move {
+    from {
+      transform: translate(0, -10px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+    to {
+      transform: translate(0, 600px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
   }
 }
 
@@ -230,7 +265,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
+  @apply dark:border-2 dark:border-solid dark:border-black;
   border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
   transition: 0.5s;
   animation: animate 6s linear infinite;
@@ -238,12 +274,14 @@
 
 .projek1:hover span:nth-child(1) {
   border: none;
-  background: #f07e6e;
+  background: #88ab8e;
+  @apply dark:bg-[#8C6A5D];
 }
 
 .projek2:hover span:nth-child(1) {
   border: none;
-  background: #84cdfa;
+  background: #43919b;
+  @apply dark:bg-[#512B81];
 }
 
 .projek3:hover span:nth-child(1) {
@@ -257,7 +295,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
+  @apply dark:border-2 dark:border-solid dark:border-black;
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   transition: 0.5s;
   animation: animate 4s linear infinite;
@@ -265,12 +304,14 @@
 
 .projek1:hover span:nth-child(2) {
   border: none;
-  background: #f07e6e;
+  background: #88ab8e;
+  @apply dark:bg-[#8C6A5D];
 }
 
 .projek2:hover span:nth-child(2) {
   border: none;
-  background: #84cdfa;
+  background: #43919b;
+  @apply dark:bg-[#512B81];
 }
 
 .projek3:hover span:nth-child(2) {
@@ -284,7 +325,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
+  @apply dark:border-2 dark:border-solid dark:border-black;
   border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
   transition: 0.5s;
   animation: animate2 10s linear infinite;
@@ -292,12 +334,14 @@
 
 .projek1:hover span:nth-child(3) {
   border: none;
-  background: #f07e6e;
+  background: #88ab8e;
+  @apply dark:bg-[#8C6A5D];
 }
 
 .projek2:hover span:nth-child(3) {
   border: none;
-  background: #84cdfa;
+  background: #43919b;
+  @apply dark:bg-[#512B81];
 }
 
 .projek3:hover span:nth-child(3) {
