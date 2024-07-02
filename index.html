@@ -12,8 +12,6 @@
       type="image/x-icon"
     />
     <script>
-      const stop1 = document.getElementById("stop1");
-      const stop2 = document.getElementById("stop2");
       if (
         localStorage.theme === "dark" ||
         (!("theme" in localStorage) &&
@@ -177,7 +175,7 @@
             <a
               id="Hubungi"
               href="#"
-              class="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-500 ease-in-out hover:opacity-80 hover:shadow-lg dark:hover:bg-blue-700 dark:hover:text-primary dark:hover:shadow-primary"
+              class="rounded-full bg-secondary px-8 py-3 text-base font-semibold text-white shadow-md shadow-black transition duration-500 ease-in-out hover:opacity-60 dark:hover:bg-blue-700 dark:hover:text-primary dark:hover:shadow-primary"
               >Hubungi Saya</a
             >
           </div>
@@ -240,7 +238,7 @@
           </div>
         </div>
         <!-- Bloob Animation Hover Start -->
-        <div class="blob"></div>
+        <!-- <div class="blob"></div> -->
         <!-- Bloob Animation Hover End -->
       </div>
     </section>
@@ -249,43 +247,147 @@
     <!-- About section Start -->
     <section id="about" class="pb-32 pt-36 dark:bg-dark">
       <div class="container">
-        <div class="flex flex-wrap">
-          <div class="mb-10 w-full px-4 lg:w-1/2">
-            <h4 class="mb-3 text-lg font-bold uppercase text-primary">
+        <div id="aboutMe" class="w-full">
+          <div class="mb-2 w-full px-4">
+            <h4
+              class="mb-2 text-center text-lg font-bold uppercase text-primary"
+            >
               Tentang Saya
             </h4>
             <h2
-              class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+              class="mb-6 text-center text-3xl font-bold text-dark dark:text-white lg:text-4xl"
             >
               Ayo, kita belajar web programming bersama-sama!
             </h2>
-            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
+            <p
+              class="mx-auto text-center font-medium text-secondary lg:max-w-[900px] lg:text-lg"
+            >
               Saya merupakan mahasiswa Informatika di Universitas Pamulang.
               Ketika ada waktu senggang saya suka mencoba hal baru terkait web
               programming, untuk meningkatkan kemampuan. Hobi saya selain web
               programming itu bermain video game dan travelling bersama
               teman-teman.
             </p>
-          </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <h3
-              class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl"
+            <p
+              class="mx-auto mt-4 text-center font-medium text-secondary lg:max-w-xl lg:text-lg"
             >
-              Mari berteman
+              Saya memiliki keahlian dalam berbagai bahasa pemrograman dan
+              framework, saya siap membantu Anda mengembangkan proyek yang
+              inovatif dan efektif.
+            </p>
+            <h2
+              class="mb-2 mt-4 text-center text-2xl font-bold text-dark dark:text-white lg:text-4xl"
+            >
+              Kemampuan Saya
+            </h2>
+            <ul
+              id="mySkill"
+              class="mt-2 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-3"
+            >
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/html.png"
+                    class="kemampuan-img"
+                    alt="html"
+                  />
+                </div>
+                <strong>HTML</strong> - Menyusun struktur konten web dengan
+                baik.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img src="img/logo/css.png" class="kemampuan-img" alt="css" />
+                </div>
+                <strong>CSS</strong> - Membuat tampilan dan tata letak yang
+                menarik.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/javascript.png"
+                    class="kemampuan-img"
+                    alt="javascript"
+                  />
+                </div>
+                <strong>JavaScript</strong> - Membuat interaktivitas pada
+                halaman web.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img src="img/logo/php.png" class="kemampuan-img" alt="php" />
+                </div>
+                <strong>PHP</strong> - Membuat halaman web dinamis dan
+                interaktif.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/java.png"
+                    class="kemampuan-img"
+                    alt="java"
+                  />
+                </div>
+                <strong>Java</strong> - Mengembangkan aplikasi yang andal dan
+                skalabel.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/flutter.png"
+                    class="kemampuan-img"
+                    alt="flutter"
+                  />
+                </div>
+                <strong>Flutter</strong> - Membangun aplikasi mobile yang indah
+                dari satu basis kode.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/mysql.png"
+                    class="kemampuan-img"
+                    alt="mysql"
+                  />
+                </div>
+                <strong>MySQL</strong> - Mengelola basis data dengan efisien.
+              </li>
+              <li class="kemampuan-list">
+                <div class="bungkus-logo">
+                  <img
+                    src="img/logo/tailwind.png"
+                    class="kemampuan-img"
+                    alt="tailwindcss"
+                  />
+                </div>
+                <strong>Tailwind CSS</strong> - Menciptakan desain custom dengan
+                cepat dan mudah.
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4">
+            <h3
+              class="mb-4 text-center text-2xl font-bold text-dark dark:text-white lg:pt-10 lg:text-3xl"
+            >
+              Mari Berteman
             </h3>
-            <p class="mb-6 text-base font-medium text-secondary">
+            <p
+              class="mx-auto mb-6 text-center text-base font-medium text-secondary lg:max-w-4xl"
+            >
               Hai teman-teman! Mari kita berkenalan dan berbagi inspirasi di
               sosial media. Follow saya di Instagram, Facebook, dan GitHub untuk
               melihat proyek-proyek terbaru, tips programming, dan petualangan
               seru saya. Jangan ragu untuk menyapa, saya senang bertemu dengan
               teman-teman baru!
             </p>
-            <div class="flex items-center">
+            <div
+              class="flex h-10 w-full items-center justify-end gap-5 md:justify-center"
+            >
               <!-- instagram -->
               <a
                 href="https://www.instagram.com/farhanhan28_/"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
+                class="social-media-circle"
               >
                 <img width="20" src="img/instagram.svg" alt="instagram" />
               </a>
@@ -293,7 +395,7 @@
               <a
                 href="https://www.facebook.com/iksan.fahreza.16"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
+                class="social-media-circle"
               >
                 <img width="20" src="img/facebook.svg" alt="facebook" />
               </a>
@@ -301,7 +403,7 @@
               <a
                 href="https://github.com/FarhanHaddad"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
+                class="social-media-circle"
               >
                 <img width="20" src="img/github.svg" alt="github" />
               </a>
@@ -503,7 +605,7 @@
           </div>
         </div>
         <ul class="cards">
-          <li class="cards_item">
+          <li id="blog1" class="cards_item">
             <div class="card">
               <div class="card_image">
                 <img src="img/blog/blog1.png" alt="blog1" />
@@ -549,7 +651,7 @@
             </div>
           </li>
 
-          <li class="cards_item">
+          <li id="blog2" class="cards_item">
             <div class="card">
               <div class="card_image">
                 <img src="img/blog/blog2.png" alt="blog2" />
@@ -593,7 +695,7 @@
             </div>
           </li>
 
-          <li class="cards_item">
+          <li id="blog3" class="cards_item">
             <div class="card">
               <div class="card_image">
                 <img src="img/blog/blog3.png" alt="Blog3" />
@@ -657,7 +759,7 @@
               Hubungi Kami
             </h2>
             <p class="text-md font-medium text-secondary md:text-lg">
-              Apakah Anda punya ide atau pertanyaan? S ingin mendengarnya!
+              Apakah Anda punya ide atau pertanyaan? Saya ingin mendengarnya!
               Hubungi saya melalui email.
             </p>
           </div>
@@ -671,6 +773,7 @@
               <input
                 type="text"
                 id="name"
+                required
                 class="focus:border-blue w-full rounded-md bg-slate-200 p-3 text-dark transition duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
             </div>
@@ -681,6 +784,7 @@
               <input
                 type="email"
                 id="email"
+                required
                 class="focus:border-blue w-full rounded-md bg-slate-200 p-3 text-dark transition duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
             </div>
@@ -691,6 +795,7 @@
               <textarea
                 type="text"
                 id="name"
+                required
                 class="focus:border-blue h-32 w-full rounded-md bg-slate-200 p-3 text-dark transition duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-blue-700"
               ></textarea>
             </div>
@@ -708,8 +813,10 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-            <h2 class="mb-5 text-4xl font-bold text-white">Makapon</h2>
-            <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
+            <h2 class="mb-5 text-4xl font-bold text-white">
+              Farhan Haddad Yakan
+            </h2>
+            <h3 class="mb-2 text-2xl font-bold">Hubungi saya</h3>
             <p>haddadyakan@gmail.com</p>
             <p>Jl. Mawar Indah No.49 Lebak Bulus</p>
             <p>Jakarta Selatan</p>
@@ -721,23 +828,23 @@
             <ul class="text-slate-300">
               <li>
                 <a
-                  href="#"
+                  href="#blog1"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Programming</a
+                  >HyperUI</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#blog2"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Kopi</a
+                  >Tailwind CSS Animated</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#blog3"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Keluarga</a
+                  >CodePen</a
                 >
               </li>
             </ul>
@@ -792,17 +899,9 @@
         </div>
         <div class="w-full border-t border-slate-700 pt-10">
           <div class="mb-5 flex items-center justify-center">
-            <!-- youtube -->
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
-            >
-              <img width="20" src="img/youtube.svg" alt="youtube" />
-            </a>
             <!-- instagram -->
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/farhanhan28_/"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
             >
@@ -810,23 +909,15 @@
             </a>
             <!-- facebook -->
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/iksan.fahreza.16"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
             >
               <img width="20" src="img/facebook.svg" alt="facebook" />
             </a>
-            <!-- twitter -->
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
-            >
-              <img width="20" src="img/twitter.svg" alt="twitter" />
-            </a>
             <!-- github -->
             <a
-              href="https://github.com"
+              href="https://github.com/FarhanHaddad"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 hover:border-primary hover:bg-primary"
             >
@@ -844,7 +935,7 @@
           <p class="text-center text-xs font-medium text-slate-500">
             Dibuat
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/farhanhan28_/"
               target="_blank"
               rel="noopener noreferrer"
               class="font-bold text-primary"
@@ -864,13 +955,13 @@
     <!-- Footer End -->
 
     <!-- back to top start -->
-    <a
+    <!-- <a
       id="to-top"
       href="#home"
       class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
     >
       <span class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"></span>
-    </a>
+    </a> -->
     <!-- back to top end -->
 
     <script src="dist/js/script.js"></script>
